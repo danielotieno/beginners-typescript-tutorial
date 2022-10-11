@@ -1,10 +1,15 @@
-import { expect, it } from "vitest";
+import { expect, it } from 'vitest';
 
-export const addTwoNumbers = (params) => {
+interface AddTwoNumbers {
+  first: number;
+  second: number;
+}
+
+export const addTwoNumbers = (params: AddTwoNumbers) => {
   return params.first + params.second;
 };
 
-it("Should add the two numbers together", () => {
+it('Should add the two numbers together', () => {
   expect(
     addTwoNumbers({
       first: 2,
